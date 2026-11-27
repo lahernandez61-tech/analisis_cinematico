@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: therapp-rehab
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app_rehab:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
